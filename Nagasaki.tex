@@ -1,15 +1,90 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\documentclass[12pt,a4paper]{article}
 
-\title{Mi Documento en LaTeX}
-\author{Tu Nombre}
-\date{Abril 2026}
+% Paquetes de configuración del documento
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+\sisetup{per-mode=symbol}
+\usepackage{csquotes}
+%Paquetes para simbologia%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{xurl}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=myblue,
+            citecolor=black,
+            filecolor=black]{hyperref}
+ % Opción estándar para enlaces
+\Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
+\usepackage{subcaption}  % en el preámbulo
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{42, 127, 179}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Bibliografía
+\addbibresource{bibliografia.bib}
+\usepackage[version=4]{mhchem}
+
+\pagestyle{fancy}
+\chead{\textit{Física III}}
+\rhead{\textit{UTN-FRVM}}
+\lhead{\textit{Ingeniería Mecánica}}
 
 \begin{document}
+\include{Portada}
+\newpage
+\tableofcontents
+\newpage
 
-\maketitle
+\begin{abstract}
+    El presente documento presenta la historia y descripción del fenómeno a desarrollar como parte de un trabajo practico para la materia dictada en 2026, llamada "Física III". Mediante un desarrollo analítico, se realiza un modelo Físico-Matemático del fenómeno para la elaboración de dicho informe, representación y simulación de lo acontecido en ese evento.
+    
+\end{abstract}
+\section{Fenómeno}
+\subsection{Antecedentes (Trinity)}
+    La bomba Fat Man fue un dispositivo nuclear de fisión por implosión que utilizó plutonio como material fisible y fue detonada sobre Nagasaki el 9 de agosto de 1945. Históricamente, se la clasifica como un arma de fisión en la que una masa inicialmente subcrítica de plutonio fue llevada a una condición supercrítica, permitiendo el desarrollo de una reacción nuclear en cadena extremadamente rápida. Esta bomba fue desarrollada por un gran grupo de físicos pertenecientes al \textit{proyecto Manhattan}, proyecto del cual fue lider el reconocido doctor \textbf{J. Robert Oppenheimer}.
+    
+    El proyecto agrupó a una gran cantidad de eminencias científicas (física, química, ciencias informáticas). Tras los experimentos previos a la guerra en Alemania, se sabía que la fisión del átomo era posible y que los nazis estaban ya trabajando en su propio programa nuclear. Según propias palabras del doctor: \textit{"No costó reunir a todas aquellas mentes brillantes, con el objetivo de conseguir la bomba antes que los alemanes."}
+    
+\section{Principios de Fat Man}
+\subsection{Criticidad y generación neutrónica}
+    El funcionamiento físico de la bomba Fat Man se basa en una reacción de fisión nuclear en cadena del plutonio-239. Cuando un neutrón es absorbido por un núcleo de plutonio, este queda excitado e inestable, y puede dividirse en dos núcleos más livianos, liberando nuevos neutrones y una gran cantidad de energía.
+    Si los neutrones emitidos producen nuevas fisiones, el proceso se multiplica rápidamente. Matemáticamente, esto se representa mediante un crecimiento exponencial del número de fisiones, gobernado por el factor de multiplicación neutrónica \textit{k}. \textit{(Eq 1: Crecimiento de Galton-Watson)} \\
+    
+    \begin{equation} \label{eq:placeholder_label}
+    N_{n+1} = k N_n
+    \end{equation}
+    
+    Cuando \textit{k} > 1, el sistema se vuelve supersticioso y la energía se libera en un tiempo extremadamente pequeño, generando una potencia enorme y produciendo los efectos explosivos característicos.
+\subsection{Mecanismo de acción}
+    
 
-Hola, este es un documento de ejemplo compilado con Visual Studio Code.
+\section{Bibliografía.}
+
+\begin{itemize}
+    \item \url{https://www.britannica.com/topic/Fat-Man}.
+    \item \url{https://mendozantigua.blogspot.com/2015/06/fat-man-la-bomba-que-fue-detonada-sobre.html?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExQjRiWEN6bXMxakhPN2lEaHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6XQVJLHVxOqY52gTZ_PR30dDmoNCPJGDisgoePeseMW8cm_7vekqgH02hOhQ_aem_b9rkYmi_vL-04qqjJSUk_g}.
+    \item \url{https://chinalakemuseum.org/fatman}.
+    \item \url{https://nuclearsecrecy.com/nukemap/}.
+    \item Serway, R.A.; Jewett, J.W. Física para ciencias e ingeniería con Física Moderna. Vol 2. 7ma Ed.
+    \item Young, H.D.; Freedman, R.A. (Sears - Zemansky) Física universitaria con Física Moderna. Vol 2. 12da Ed.
+    \item Eisberg, R.M. Fundamentos de Física Moderna.
+\end{itemize}
+
+\vfill
+\textit{\textbf{Este trabajo fue elaborado con la ayuda de la inteligencia artificial para facilitar la confección y disposición de los elementos en dicho trabajo; y también en la orientación del desarrollo matemático e historia del evento}}
 
 \end{document}
