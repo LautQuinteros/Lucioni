@@ -44,6 +44,7 @@
 \lhead{\textit{Ingeniería Mecánica}}
 
 \begin{document}
+\sloppy
 \include{Portada}
 \newpage
 \tableofcontents
@@ -62,13 +63,14 @@
 \section{Principios de Fat Man}
 \subsection{Criticidad y generación neutrónica}
     El funcionamiento físico de la bomba Fat Man se basa en una reacción de fisión nuclear en cadena del plutonio-239. Cuando un neutrón es absorbido por un núcleo de plutonio, este queda excitado e inestable, y puede dividirse en dos núcleos más livianos, liberando nuevos neutrones y una gran cantidad de energía.
-    Si los neutrones emitidos producen nuevas fisiones, el proceso se multiplica rápidamente. Matemáticamente, esto se representa mediante un crecimiento exponencial del número de fisiones, gobernado por el factor de multiplicación neutrónica \textit{k}. \textit{(Eq 1: Crecimiento de Galton-Watson)} \\
+
+    Si los neutrones emitidos producen nuevas fisiones, el proceso se multiplica rápidamente. Matemáticamente, esto se representa mediante un crecimiento exponencial del número de fisiones, gobernado por el factor de multiplicación neutrónica \textit{k} (Eq. 1: Crecimiento de Galton-Watson).
     
     \begin{equation} \label{eq:placeholder_label}
     N_{n+1} = k N_n
     \end{equation}
     
-    Cuando \textit{k} > 1, el sistema se vuelve supersticioso y la energía se libera en un tiempo extremadamente pequeño, generando una potencia enorme y produciendo los efectos explosivos característicos.
+    Cuando \textit{k} > 1, el sistema se vuelve supercrítico y la energía se libera en un tiempo extremadamente pequeño, generando una potencia enorme y produciendo los efectos explosivos característicos.
 \subsection{Mecanismo de acción}
     
 
